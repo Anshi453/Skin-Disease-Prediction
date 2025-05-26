@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-image: url('/static/image.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%;
+            margin-bottom: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+        .info {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .info h2 {
+            color: #333;
+            text-align: center;
+        }
+        .info div {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: rgba(240, 240, 240, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .info div h3 {
+            margin-bottom: 5px;
+            color: #4CAF50;
+        }
+        .info div p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Skin Disease Screening</h1>
+    <div class="container">
+        <h2>Prediction Result</h2>
+        <p>Prediction: {{ prediction }}</p>
+        <a href="/">Upload Another Image</a>
+    </div>
+    <div class="container info">
+        <h2>Common Skin Diseases</h2>
+        <div>
+            <h3>Acne</h3>
+            <p>Acne is a skin condition that occurs when hair follicles become clogged with oil and dead skin cells. It often causes whiteheads, blackheads, or pimples, and usually appears on the face, forehead, chest, upper back, and shoulders.</p>
+        </div>
+        <div>
+            <h3>Eczema</h3>
+            <p>Eczema is a condition that makes your skin red and itchy. It's common in children but can occur at any age. Eczema is long-lasting (chronic) and tends to flare periodically.</p>
+        </div>
+        <div>
+            <h3>Psoriasis</h3>
+            <p>Psoriasis is a skin disease that causes red, itchy scaly patches, most commonly on the knees, elbows, trunk, and scalp. It is a common, long-term (chronic) disease with no cure.</p>
+        </div>
+        <div>
+            <h3>Rosacea</h3>
+            <p>Rosacea is a common skin condition that causes redness and visible blood vessels in your face. It may also produce small, red, pus-filled bumps.</p>
+        </div>
+    </div>
+</body>
+</html>
